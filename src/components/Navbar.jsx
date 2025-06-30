@@ -240,11 +240,24 @@ export default function Navbar() {
         style={{ top: 0 }}
       >
         <div
-          className={`bg-white shadow-2xl rounded-xl w-[90vw] max-w-sm h-[90vh] flex flex-col relative transition-transform duration-300 ${
-            menuOpen
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
-          }`}
+          className={`
+            bg-white shadow-2xl rounded-xl
+            w-[96vw] max-w-sm
+            h-[92vh] max-h-[600px]
+            flex flex-col relative transition-transform duration-300
+            px-2 py-2
+            sm:w-[90vw] sm:h-[90vh]
+            ${
+              menuOpen
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-full opacity-0"
+            }
+          `}
+          style={{
+            // Garante espaçamento mínimo em todos os lados em telas muito pequenas
+            margin:
+              "env(safe-area-inset-top,12px) env(safe-area-inset-right,8px) env(safe-area-inset-bottom,12px) env(safe-area-inset-left,8px)",
+          }}
         >
           {/* Fechar */}
           <button
