@@ -1,5 +1,13 @@
+import HomeCarousel from "./components/HomeCarousel";
+import Navbar from "./components/Navbar";
+
 function App() {
-  return <h1>Hello, this is Delfinos Design!</h1>;
+  return (
+    <>
+      <Navbar />
+      <HomeCarousel />
+    </>
+  );
 }
 
 export default App;
